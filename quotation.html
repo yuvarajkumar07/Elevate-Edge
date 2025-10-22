@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevate Edge Interiors - Quotation Generator</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <custom-navbar></custom-navbar>
+    
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <!-- Header Section -->
+        <header class="mb-12 text-center">
+            <div class="flex items-center justify-center mb-4">
+                <img src="assets/logo.png" alt="Elevate Edge Logo" class="w-12 h-12 rounded-md mr-3 object-cover" />
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-800">Elevate Edge Interiors</h1>
+                    <p class="text-gray-600">LET'S DESIGN YOUR DREAM SPACE TOGETHER.</p>
+                </div>
+            </div>
+            <div class="text-gray-700">
+                <p>Jubilee Hills, Hyderabad - 500033, Telangana | Phone: +91 89197 94276 | Email: studioelevateedge@gmail.com</p>
+            </div>
+        </header>
+
+        <!-- Add Item Form -->
+        <section class="mb-12 bg-white rounded-xl shadow-md p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <i data-feather="plus-circle" class="mr-2 text-indigo-600"></i>
+                Add Item to Quotation
+            </h2>
+            
+            <form id="itemForm" class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div>
+                    <label for="productName" class="block text-sm font-medium text-gray-700 mb-1">Product Name</label>
+                    <input type="text" id="productName" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Enter product name">
+                </div>
+                
+                <div>
+                    <label for="price" class="block text-sm font-medium text-gray-700 mb-1">Price (₹)</label>
+                    <input type="number" id="price" min="0" step="0.01" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="0.00">
+                </div>
+                
+                <div>
+                    <label for="quantity" class="block text-sm font-medium text-gray-700 mb-1">Quantity</label>
+                    <input type="number" id="quantity" min="1" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="1">
+                </div>
+                
+                <div class="flex items-end">
+                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-md transition duration-300 flex items-center justify-center">
+                        <i data-feather="plus" class="mr-1"></i> Add Item
+                    </button>
+                </div>
+            </form>
+            
+            <div id="formError" class="mt-3 text-red-600 text-sm hidden"></div>
+        </section>
+
+        <!-- Quotation List -->
+        <section class="mb-12 bg-white rounded-xl shadow-md p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <i data-feather="list" class="mr-2 text-indigo-600"></i>
+                Quotation Items
+            </h2>
+            
+            <div id="quotationItemsContainer">
+                <div id="emptyState" class="text-center py-12">
+                    <i data-feather="shopping-cart" class="mx-auto h-12 w-12 text-gray-400 mb-4"></i>
+                    <h3 class="text-lg font-medium text-gray-900 mb-1">No items added yet</h3>
+                    <p class="text-gray-500">Add products to your quotation using the form above</p>
+                </div>
+                
+                <div id="itemsTable" class="hidden">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Product Name</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price (₹)</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Quantity</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Subtotal (₹)</th>
+                                    <th scope="col" class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="itemsTableBody" class="bg-white divide-y divide-gray-200">
+                                <!-- Items will be added here dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial Summary -->
+        <section class="mb-12 bg-white rounded-xl shadow-md p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <i data-feather="calculator" class="mr-2 text-indigo-600"></i>
+                Financial Summary
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="clientName" class="block text-sm font-medium text-gray-700 mb-1">Client Name (Optional)</label>
+                    <input type="text" id="clientName" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Enter client name">
+                </div>
+                
+                <div>
+                    <label for="discount" class="block text-sm font-medium text-gray-700 mb-1">Discount (%)</label>
+                    <input type="number" id="discount" min="0" max="100" value="0" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+            </div>
+            
+            <div class="mt-8 bg-gray-50 rounded-lg p-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="text-center p-4 bg-white rounded-lg shadow">
+                        <p class="text-sm text-gray-600">Total Price</p>
+                        <p id="totalPrice" class="text-2xl font-bold text-gray-800">₹0.00</p>
+                    </div>
+                    
+                    <div class="text-center p-4 bg-white rounded-lg shadow">
+                        <p class="text-sm text-gray-600">Discount Amount</p>
+                        <p id="discountAmount" class="text-2xl font-bold text-gray-800">₹0.00</p>
+                    </div>
+                    
+                    <div class="text-center p-4 bg-indigo-50 rounded-lg shadow">
+                        <p class="text-sm text-indigo-600">Final Price</p>
+                        <p id="finalPrice" class="text-2xl font-bold text-indigo-700">₹0.00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PDF Generation -->
+        <section class="text-center">
+            <button id="generatePdfBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-8 rounded-md transition duration-300 flex items-center mx-auto" disabled>
+                <i data-feather="file-text" class="mr-2"></i> Generate Quotation PDF
+            </button>
+        </section>
+    </main>
+
+    <!-- PDF Preview Modal -->
+    <div id="pdfPreviewModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg w-11/12 max-w-6xl h-5/6 flex flex-col">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 class="text-xl font-bold">Quotation Preview</h3>
+                <div class="flex space-x-2">
+                    <button id="downloadPdfBtn" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded flex items-center">
+                        <i data-feather="download" class="mr-1"></i> Download PDF
+                    </button>
+                    <button id="closePreviewBtn" class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded">
+                        <i data-feather="x"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="pdfPreviewContent" class="flex-grow overflow-auto p-4">
+                <div id="pdfPreviewLoader" class="flex items-center justify-center h-full">
+                    <div class="text-center">
+                        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto mb-4"></div>
+                        <p>Generating preview...</p>
+                    </div>
+                </div>
+                <div id="pdfPreviewDocument" class="hidden">
+                    <!-- PDF content will be generated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <custom-footer></custom-footer>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>

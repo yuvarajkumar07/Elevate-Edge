@@ -1,0 +1,56 @@
+/* Shared styles across all pages */
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --site-bg: #111111;
+    --site-accent: #000000;
+    --muted: #707070;
+}
+
+body {
+    font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    color: #111111;
+}
+
+/* Custom styles for this application */
+.remove-item-btn {
+    transition: all 0.2s ease;
+}
+
+.remove-item-btn:hover {
+    transform: scale(1.1);
+}
+
+#itemsTableBody tr:hover {
+    background-color: #f9fafb;
+}
+
+.feather-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.accent {
+    color: var(--site-accent);
+}
+
+.bg-accent {
+    background-color: var(--site-accent);
+}
+
+.bg-dark-card { background-color: #0b0b0b; border: 1px solid rgba(255,255,255,0.03); }
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #pdfPreviewDocument, #pdfPreviewDocument * {
+        visibility: visible;
+    }
+    #pdfPreviewDocument {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}
