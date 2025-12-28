@@ -40,22 +40,64 @@
       padding-top: 40px !important;
     }
   }
+
+  
 </style>
 <style>
   @media (max-width: 768px) {
 
-    /* Center text inside project card on mobile */
+    /* Always show text on mobile (no hover/tap needed) */
     .project__slider__item__hover {
+      bottom: 15px !important;
+      opacity: 1 !important;
+      visibility: visible !important;
       text-align: center !important;
     }
 
+    /* Center text */
     .project__slider__item__hover span,
     .project__slider__item__hover h5 {
       text-align: center !important;
-      width: 100%;
+      width: 100% !important;
+      left: 0 !important;
+      right: 0 !important;
+    }
+
+    /* Disable hover animation offsets */
+    .project__slider__item__hover span {
+      position: static !important;
+    }
+
+    .project__slider__item__hover h5 {
+      position: static !important;
+    }
+
+    /* Prevent hover-triggered movement */
+    .project__slider__item:hover .project__slider__item__hover {
+      bottom: 15px !important;
     }
   }
 </style>
+<style>
+  @media (max-width: 768px) {
+
+    /* Fix image height & prevent compression */
+    .project__slider__item {
+      height: 380px !important;              /* more natural height */
+      background-size: cover !important;     /* fill without stretch */
+      background-position: center center !important;
+    }
+
+    /* Ensure container doesn’t squeeze image */
+    .project-slide,
+    .project__slider .owl-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+</style>
+
 
 </head>
 
@@ -116,7 +158,13 @@
         <div class="hero__slider owl-carousel">
             <div class="hero__items set-bg" data-setbg="img/hero/main11.png">
                 <div class="hero__text">
-                    <h2>Let's design your dream space together.</h2>
+                    <h2 class="responsive-hero">
+  Let's design<br class="mobile-break">
+  your<br class="mobile-break">
+  dream space<br class="mobile-break">
+  together
+</h2>
+
                     <a href="./about.html" class="primary-btn">See About</a>
                     <div class="hero__social">
                         <a href="https://www.instagram.com/elevate_edge_interiors/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
@@ -138,6 +186,32 @@
         </div>
         <div class="slide-num" id="snh-1"></div>
         <div class="slider__progress"><span></span></div>
+
+        <style>
+  /* Desktop */
+  .mobile-break {
+    display: none;
+  }
+
+  /* 📱 Mobile View */
+  @media (max-width: 768px) {
+
+    .hero__text h2.responsive-hero {
+      position: static !important;
+      top: 0 !important;
+      opacity: 1 !important;
+      font-size: 28px !important;
+      line-height: 1.15 !important;
+      text-align: center !important;
+      white-space: normal !important;
+    }
+
+    .mobile-break {
+      display: block !important;
+    }
+  }
+</style>
+
     </section>
     <!-- Hero Section End -->
 
@@ -156,7 +230,7 @@
           color:#dfa667;
           margin-bottom:10px;
           font-size:14px;">
-          Who are we
+          Who are we?
         </span>
 
         <!-- HEADING -->
@@ -241,8 +315,8 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="section-title" style="margin-bottom:30px;">
-                    <span>Our works</span>
-                    <h2>projects</h2>
+                   <!-- <span>What we do?</span>
+                    <h2>projects</h2>-->
                 </div>
             </div>
         </div>
@@ -348,264 +422,515 @@
     </style>
 
 </section>
-<!-- Project Section End -->
 
     <!-- Project Section End -->
 
+    
 <!-- Services Section Begin -->
-<section class="services spad">
+<section class="services spad" style="padding-bottom:60px;">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="section-title">
+                <div class="section-title text-center" style="margin-bottom:30px;">
                     <span>Our specialization</span>
-                    <h2>What we do</h2>
+                    <h2>What we do?</h2>
                 </div>
             </div>
         </div>
+
         <div class="row">
+
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="services__item">
-                    <img src="img/services/services-1.png" alt="">
+                <div class="services__item" style="text-align:center;">
+                    <img src="img/services/services-1.png" alt="" style="width:60px; margin-bottom:15px;">
                     <h4>Interior Design</h4>
-                    <p style="color: #444;">We design elegant interiors that reflect your lifestyle through balanced layouts, textures, and colors. Each space is made to feel functional, beautiful, and naturally comfortable in every detail.</p>
+                    <p style="color:#444;">
+                        Elegant interiors with balanced layouts, textures, and comfort.
+                    </p>
                 </div>
             </div>
+
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="services__item">
-                    <img src="img/services/services-2.png" alt="">
+                <div class="services__item" style="text-align:center;">
+                    <img src="img/services/services-2.png" alt="" style="width:60px; margin-bottom:15px;">
                     <h4>Office Design</h4>
-                    <p style="color: #444;">We build workspaces that improve creativity, focus, and teamwork. With sleek layouts and modern finishes, each office design reflects your brand and supports a professional, energetic atmosphere.</p>
+                    <p style="color:#444;">
+                        Workspaces designed for creativity, focus, and productivity.
+                    </p>
                 </div>
             </div>
+
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="services__item">
-                    <img src="img/services/services-3.png" alt="">
+                <div class="services__item" style="text-align:center;">
+                    <img src="img/services/services-3.png" alt="" style="width:60px; margin-bottom:15px;">
                     <h4>Automation</h4>
-                    <p style="color: #444;">Our smart systems manage lighting, climate, and security with ease. Designed to suit your lifestyle, these features blend into your space and add comfort, safety, and efficiency effortlessly.</p>
+                    <p style="color:#444;">
+                        Smart systems for lighting, climate, and security.
+                    </p>
                 </div>
             </div>
+
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="services__item">
-                    <img src="img/services/services-4.png" alt="">
+                <div class="services__item" style="text-align:center;">
+                    <img src="img/services/services-4.png" alt="" style="width:60px; margin-bottom:15px;">
                     <h4>Architecture</h4>
-                    <p style="color: #444;">We turn ideas into structures with designs rooted in purpose, beauty, and function. From planning to completion, we create sustainable, innovative buildings that tell your story clearly.</p>
+                    <p style="color:#444;">
+                        Purpose-driven, sustainable, and innovative structures.
+                    </p>
                 </div>
             </div>
+
         </div>
+    </div>
+
+    <!-- 📱 MOBILE COMPACT FIX -->
+    <style>
+        @media (max-width: 768px) {
+
+            /* Reduce card padding & height */
+            .services__item {
+                padding: 18px 14px !important;
+                min-height: auto !important;
+            }
+
+            /* Reduce heading size */
+            .services__item h4 {
+                font-size: 16px !important;
+                margin-bottom: 10px !important;
+            }
+
+            /* Reduce paragraph size */
+            .services__item p {
+                font-size: 14px !important;
+                line-height: 1.55 !important;
+            }
+
+            /* Reduce section padding */
+            .services {
+                padding-top: 40px !important;
+                padding-bottom: 40px !important;
+            }
+
+            /* Smaller icons */
+            .services__item img {
+                width: 48px !important;
+                margin-bottom: 10px !important;
+            }
+        }
+    </style>
+
 </section>
 <!-- Services Section End -->
 
 
-    <!-- Testimonial Section Begin -->
-    <section class="testimonial spad set-bg" data-setbg="img/testimonial/testimonial-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="section-title">
-                        <span>Organizations</span>
-                        <h2>Our Clients</h2>
-                    </div>
-                </div>
-            </div>
-           
-          
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="logo__carousel owl-carousel">
-                        <div class="logo__carousel__item">
-                            <a href="#"><img src="img/logo/logo-1.png" alt=""></a>
-                        </div>
-                        <div class="logo__carousel__item">
-                            <a href="#"><img src="img/logo/logo-2.png" alt=""></a>
-                        </div>
-                        <div class="logo__carousel__item">
-                            <a href="#"><img src="img/logo/logo-3.png" alt=""></a>
-                        </div>
-                        <div class="logo__carousel__item">
-                            <a href="#"><img src="img/logo/logo-4.png" alt=""></a>
-                        </div>
-                        <div class="logo__carousel__item">
-                            <a href="#"><img src="img/logo/logo-5.png" alt=""></a>
-                        </div>
-                        <div class="logo__carousel__item">
-                            <a href="#"><img src="img/logo/logo-3.png" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- Testimonial Section Begin -->
+<section class="testimonial spad set-bg" data-setbg="img/testimonial/testimonial-bg.jpg">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="section-title">
+          <span>Prestigious Communities</span>
+          <h2 class="responsive-heading" style="text-transform: uppercase;">
+  Projects Delivered<br class="mobile-break">
+  in Iconic<br class="mobile-break">
+  Residential Spaces
+</h2>
+
         </div>
-    </section>
-    <!-- Testimonial Section End -->
+      </div>
+    </div>
+  </div>
+
+  <!-- SCROLLING LOGOS -->
+  <div class="logo-marquee">
+    <div class="logo-track">
+      <img src="img/logo/dsr.png" alt="">
+      <img src="img/logo/rajapushpa.png" alt="">
+      <img src="img/logo/myhomeconstructions.webp" alt="">
+      <img src="img/logo/aparna.svg" alt="">
+      <img src="img/logo/lansum.svg" alt="">
+      <img src="img/logo/ncclimited.png" alt="">
+      <img src="img/logo/prestige.svg" alt="">
+
+      <!-- duplicate for seamless loop -->
+      <img src="img/logo/dsr.png" alt="">
+      <img src="img/logo/rajapushpa.png" alt="">
+      <img src="img/logo/myhomeconstructions.webp" alt="">
+      <img src="img/logo/aparna.svg" alt="">
+      <img src="img/logo/lansum.svg" alt="">
+      <img src="img/logo/ncclimited.png" alt="">
+      <img src="img/logo/prestige.svg" alt="">
+    </div>
+  </div>
+
+  <style>
+  /* Default: Laptop/Desktop (single line) */
+  .mobile-break {
+    display: none;
+  }
+
+  /* 📱 Mobile View */
+  @media (max-width: 768px) {
+    .responsive-heading {
+      font-size: 22px !important;
+      line-height: 1.25 !important;
+    }
+
+    .mobile-break {
+      display: inline;
+    }
+  }
+</style>
+
+
+  <style>
+  @media (max-width: 768px) {
+
+    /* Reduce heading size on mobile */
+    .testimonial .section-title h2 {
+      font-size: 22px !important;
+      line-height: 1.3 !important;
+      margin-bottom: 10px !important;
+    }
+
+    /* Reduce subheading */
+    .testimonial .section-title span {
+      font-size: 12px !important;
+      letter-spacing: 1px !important;
+    }
+  }
+</style>
+
+
+  <!-- INLINE CSS -->
+  <style>
+    .logo-marquee {
+      overflow: hidden;
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    .logo-track {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      width: max-content;
+      animation: scrollLogos 40s linear infinite;
+    }
+
+    .logo-track img {
+      max-height: 60px;
+      width: auto;
+      opacity: 1;
+    }
+
+    @keyframes scrollLogos {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .logo-track {
+        gap: 36px;
+        animation-duration: 25s;
+      }
+
+      .logo-track img {
+        max-height: 40px;
+      }
+
+      .testimonial {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+      }
+    }
+  </style>
+
+</section>
+<!-- Testimonial Section End -->
+
+
    
 
-    <!-- Team Section Begin -->
-    <section class="team spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-9 col-md-8 col-sm-6">
-                    <div class="section-title">
-                        <span>Our Team</span>
-                        <h2>Meet our team</h2>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="team__btn">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="team__item set-bg" data-setbg="img/team/subhash.jpg">
-                        <div class="team__text">
-                            <div class="team__title">
-                                <h5>Subhash Patibandla</h5>
-                                <span>Co-Founder</span>
-                            </div>
-                            <p>Design begins where structure ends. I believe that creativity brings warmth, personality, and soul to a space. From color to texture, 
-                                it's about crafting an atmosphere that feels alive - a place where people can feel inspired, comforted, and truly at home.</p>
-                            <div class="team__social">
-                                <a href="https://www.instagram.com/subhashpatibandla/" target="_blank"><i class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/subhash-patibandla-04163b154/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team__item set-bg" data-setbg="img/team/vanya.jpg">
-                        <div class="team__text">
-                            <div class="team__title">
-                                <h5>Vanya Nuthakki</h5>
-                                <span>Co-Founder</span>
-                            </div>
-                            <p>Architecture is more than structure - it's the art of shaping experiences. 
-                                Every line we draw is guided by purpose, proportion, and people. 
-                                My goal is to design spaces that not only stand the test of time but leave a lasting emotional impression.</p>
-                            <div class="team__social">
-                                <a href="https://www.instagram.com/vanya_nuthakki_96/" target="_blank"><i class="fab fa-instagram"></i></a>                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team__item set-bg" data-setbg="img/team/yuvaraj.jpg">
-                        <div class="team__text">
-                            <div class="team__title">
-                                <h5>Yuvaraj Kumar Kattepogu</h5>
-                                <span>Digital Head</span>
-                            </div>
-                            <p>In today's digital world, your first impression is online. 
-                                I focus on crafting a strong digital presence that reflects our brand's values, 
-                                engages our audience, and connects our work with the world.</p>
-                            <div class="team__social">
-                                <a href="https://www.instagram.com/yuvarajkumar.k/" target="_blank"><i class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/yuvaraj-kumar-kattepogu/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
+<!-- Team Section Begin -->
+<section class="team spad">
+    <div class="container">
+
+        <!-- Heading -->
+        <div class="row justify-content-center">
+            <div class="col-lg-12 text-center">
+                <div class="section-title" style="margin-bottom:30px;">
+                    <span>Our Team</span>
+                    <h2>Meet Our Team</h2>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Team Section End -->
+
+        <!-- Team Members -->
+        <div class="row justify-content-center">
+
+            <!-- Member 1 -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="team__item set-bg" data-setbg="img/team/subhash.jpg">
+                    <div class="team__text">
+                        <div class="team__title">
+                            <h5>Subhash Patibandla</h5>
+                            <span>Co-Founder</span>
+                        </div>
+                        <p>
+                            Design begins where structure ends. I believe that creativity brings warmth, personality, 
+                            and soul to a space. From color to texture, it's about crafting an atmosphere that feels 
+                            alive - a place where people can feel inspired, comforted, and truly at home.
+                        </p>
+                        <div class="team__social">
+                            <a href="https://www.instagram.com/subhashpatibandla/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/subhash-patibandla-04163b154/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="team__item set-bg" data-setbg="img/team/vanya.jpg">
+                    <div class="team__text">
+                        <div class="team__title">
+                            <h5>Vanya Nuthakki</h5>
+                            <span>Co-Founder</span>
+                        </div>
+                        <p>
+                            Architecture is more than structure - it's the art of shaping experiences. Every line 
+                            we draw is guided by purpose, proportion, and people. 
+                            My goal is to design spaces that not only stand the test of time but leave a lasting emotional impression.
+                        </p>
+                        <div class="team__social">
+                            <a href="https://www.instagram.com/vanya_nuthakki_96/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 📱 MOBILE & 💻 LAPTOP OPTIMIZATION -->
+    <style>
+        /* General card spacing */
+        .team__item {
+            margin-bottom: 30px;
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        /* Text box */
+        .team__text {
+            padding: 22px !important;
+        }
+
+        .team__text p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+
+            .team {
+                padding-top: 40px !important;
+                padding-bottom: 40px !important;
+            }
+
+            .team__item {
+                height: 380px !important;
+            }
+
+            .team__text {
+                padding: 16px !important;
+            }
+
+            .team__text p {
+                font-size: 13px !important;
+                line-height: 1.5 !important;
+            }
+
+            .team__social a {
+                margin-right: 10px;
+            }
+        }
+    </style>
+
+</section>
+<!-- Team Section End -->
+
 
 
 
 
 <!-- Start Feature Area -->
-<section class="feature-area section-gap" style="background-color: #ffffff; padding: 60px 0; font-family: 'Segoe UI', sans-serif;">
-  <div class="container" style="max-width: 1140px; margin: auto;">
-    <div class="row d-flex justify-content-center">
-      <div class="col-md-12 pb-40 header-text text-center" style="padding-bottom: 40px;">
-        <h1 class="pb-10" style="color: #222; font-size: 36px; margin-bottom: 10px;">SOME FEATURES THAT MADE US UNIQUE</h1>
-        <p style="color: #555; font-size: 16px;">We stand out through quality, innovation, and customer satisfaction.</p>
+<!-- Start Feature Area -->
+<section class="feature-area section-gap" style="background-color:#ffffff; padding:60px 0; font-family:'Segoe UI', sans-serif;">
+  
+  <div class="container" style="max-width:1140px; margin:auto;">
+
+    <!-- Section Heading -->
+    <div class="row justify-content-center">
+      <div class="col-lg-12 text-center" style="margin-bottom:40px;">
+        <h1 style="color:#222; font-size:36px; margin-bottom:10px;">
+          SOME FEATURES THAT MADE US UNIQUE
+        </h1>
+        <p style="color:#555; font-size:16px;">
+          We stand out through quality, innovation, and customer satisfaction.
+        </p>
       </div>
     </div>
 
-    <div class="row" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+    <!-- Features -->
+    <div class="row justify-content-center" style="gap:30px;">
 
-      <!-- Feature 1 -->
-      <div class="col-lg-4 col-md-6 d-flex" style="flex: 1 1 calc(33.333% - 30px); max-width: calc(33.333% - 30px); min-width: 280px;">
-        <div class="single-feature w-100" style="background: #f5c887; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.07); display: flex; flex-direction: column;">
-          <div class="d-flex align-items-center mb-3">
-            <span class="fas fa-user-cog" style="font-size: 24px; margin-right: 12px; color: #222;"></span>
-            <h4 style="margin: 0; font-size: 20px; font-weight: 600; color: #222;">EXPERT TECHNICIANS</h4>
-          </div>
-          <p style="color: #444; font-size: 15px;">Skilled hands meet sharp minds. Our technicians bring unmatched precision and deep experience to every project — ensuring flawless execution from start to finish.</p>
+      <!-- Feature Card -->
+      <div class="col-lg-4 col-md-6">
+        <div class="single-feature">
+          <span class="fas fa-user-cog"></span>
+          <h4>EXPERT TECHNICIANS</h4>
+          <p>
+            Skilled hands meet sharp minds, ensuring flawless execution from start to finish.
+          </p>
         </div>
       </div>
 
-      <!-- Feature 2 -->
-      <div class="col-lg-4 col-md-6 d-flex" style="flex: 1 1 calc(33.333% - 30px); max-width: calc(33.333% - 30px); min-width: 280px;">
-        <div class="single-feature w-100" style="background: #f5c887; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.07); display: flex; flex-direction: column;">
-          <div class="d-flex align-items-center mb-3">
-            <span class="fas fa-briefcase" style="font-size: 24px; margin-right: 12px; color: #222;"></span>
-            <h4 style="margin: 0; font-size: 20px; font-weight: 600; color: #222;">PROFESSIONAL SERVICE</h4>
-          </div>
-          <p style="color: #444; font-size: 15px;">Punctual. Polished. Proactive. We deliver more than just service — we provide a seamless experience built on trust, transparency, and top-tier professionalism.</p>
-         
+      <div class="col-lg-4 col-md-6">
+        <div class="single-feature">
+          <span class="fas fa-briefcase"></span>
+          <h4>PROFESSIONAL SERVICE</h4>
+          <p>
+            A seamless experience built on trust, transparency, and professionalism.
+          </p>
         </div>
       </div>
 
-
-      <!-- Feature 5 -->
-      <div class="col-lg-4 col-md-6 d-flex" style="flex: 1 1 calc(33.333% - 30px); max-width: calc(33.333% - 30px); min-width: 280px;">
-        <div class="single-feature w-100" style="background: #f5c887; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.07); display: flex; flex-direction: column;">
-          <div class="d-flex align-items-center mb-3">
-            <span class="fas fa-gem" style="font-size: 24px; margin-right: 12px; color: #222;"></span>
-            <h4 style="margin: 0; font-size: 20px; font-weight: 600; color: #222;">HIGHLY RECOMMENDED</h4>
-          </div>
-          <p style="color: #444; font-size: 15px;">Our work speaks for itself. With a consistent record of excellence and client satisfaction, we've become a trusted choice for those who value quality and reliability.</p>
-         
+      <div class="col-lg-4 col-md-6">
+        <div class="single-feature">
+          <span class="fas fa-gem"></span>
+          <h4>HIGHLY RECOMMENDED</h4>
+          <p>
+            Trusted by clients who value quality, reliability, and excellence.
+          </p>
         </div>
       </div>
 
-
-      
-
-      <!-- Feature 4 -->
-      <div class="col-lg-4 col-md-6 d-flex" style="flex: 1 1 calc(33.333% - 30px); max-width: calc(33.333% - 30px); min-width: 280px;">
-        <div class="single-feature w-100" style="background: #f5c887; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.07); display: flex; flex-direction: column;">
-          <div class="d-flex align-items-center mb-3">
-            <span class="fas fa-rocket" style="font-size: 24px; margin-right: 12px; color: #222;"></span>
-            <h4 style="margin: 0; font-size: 20px; font-weight: 600; color: #222;">TECHNICAL SKILLS</h4>
-          </div>
-          <p style="color: #444; font-size: 15px;">Innovation is in our DNA. We blend the latest tools and tech with practical expertise, delivering future-ready solutions in design, automation, and development.</p>
-          
+      <div class="col-lg-4 col-md-6">
+        <div class="single-feature">
+          <span class="fas fa-rocket"></span>
+          <h4>TECHNICAL SKILLS</h4>
+          <p>
+            Future-ready solutions powered by innovation and expertise.
+          </p>
         </div>
       </div>
 
-
-      <!-- Feature 3 -->
-      <div class="col-lg-4 col-md-6 d-flex" style="flex: 1 1 calc(33.333% - 30px); max-width: calc(33.333% - 30px); min-width: 280px;">
-        <div class="single-feature w-100" style="background: #f5c887; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.07); display: flex; flex-direction: column;">
-          <div class="d-flex align-items-center mb-3">
-            <span class="fas fa-headset" style="font-size: 24px; margin-right: 12px; color: #222;"></span>
-            <h4 style="margin: 0; font-size: 20px; font-weight: 600; color: #222;">GREAT SUPPORT</h4>
-          </div>
-          <p style="color: #444; font-size: 15px;">You're never alone. From the first inquiry to the final delivery, our support team ensures every question is answered and every need is met — quickly and kindly.</p>
-         
+      <div class="col-lg-4 col-md-6">
+        <div class="single-feature">
+          <span class="fas fa-headset"></span>
+          <h4>GREAT SUPPORT</h4>
+          <p>
+            Dedicated support from the first conversation to final delivery.
+          </p>
         </div>
       </div>
 
-  
-
-      <!-- Feature 6 -->
-      <div class="col-lg-4 col-md-6 d-flex" style="flex: 1 1 calc(33.333% - 30px); max-width: calc(33.333% - 30px); min-width: 280px;">
-        <div class="single-feature w-100" style="background: #f5c887; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.07); display: flex; flex-direction: column;">
-          <div class="d-flex align-items-center mb-3">
-            <span class="fas fa-comments" style="font-size: 24px; margin-right: 12px; color: #222;"></span>
-            <h4 style="margin: 0; font-size: 20px; font-weight: 600; color: #222;">POSITIVE REVIEWS</h4>
-          </div>
-          <p style="color: #444; font-size: 15px;">Happy clients are our greatest reward. Their kind words fuel our passion and reflect the dedication we bring to every detail, every time.</p>
-          
+      <div class="col-lg-4 col-md-6">
+        <div class="single-feature">
+          <span class="fas fa-comments"></span>
+          <h4>POSITIVE REVIEWS</h4>
+          <p>
+            Client satisfaction that speaks louder than words.
+          </p>
         </div>
       </div>
 
     </div>
   </div>
+
+  <!-- INLINE STYLES -->
+  <style>
+
+    /* Desktop & Common */
+    .single-feature {
+      background:#f5c887;
+      padding:28px;
+      border-radius:14px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.07);
+      text-align:center;
+      height:100%;
+    }
+
+    .single-feature span {
+      font-size:26px;
+      color:#222;
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .single-feature h4 {
+      font-size:18px;
+      font-weight:600;
+      margin-bottom:10px;
+      color:#222;
+    }
+
+    .single-feature p {
+      font-size:15px;
+      color:#444;
+      line-height:1.6;
+      margin:0;
+    }
+
+    /* 📱 MOBILE OPTIMIZATION */
+    @media (max-width:768px) {
+
+      .feature-area {
+        padding:40px 0 !important;
+      }
+
+      .feature-area h1 {
+        font-size:22px !important;
+        line-height:1.3 !important;
+      }
+
+      .feature-area p {
+        font-size:14px !important;
+      }
+
+      .single-feature {
+        padding:20px !important;
+      }
+
+      .single-feature span {
+        font-size:22px !important;
+      }
+
+      .single-feature h4 {
+        font-size:16px !important;
+      }
+
+      .single-feature p {
+        font-size:13px !important;
+        line-height:1.5 !important;
+      }
+    }
+
+  </style>
+
 </section>
+<!-- End Feature Area -->
+
+
 <!-- End Feature Area -->
 
 
