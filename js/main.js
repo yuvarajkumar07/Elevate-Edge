@@ -80,33 +80,33 @@
     });
 
     /*--------------------------
-        Project Slider
-    ----------------------------*/
-    $(".project__slider").owlCarousel({
-        loop: true,
-        margin: 0,
-        items: 4,
-        dots: false,
-        nav: true,
-        navText: ["<span class='arrow_carrot-left'><span/>", "<span class='arrow_carrot-right'><span/>"],
-        smartSpeed: 1200,
-        autoHeight: false,
-        autoplay: false,
-        responsive: {
-            320: {
-                items: 1
-            },
-            768: {
-                items: 2
-            },
-            992: {
-                items: 3
-            },
-            1200: {
-                items: 4
-            }
+    Project Slider (MOBILE FIXED)
+----------------------------*/
+$(".project__slider").owlCarousel({
+    loop: true,
+    margin: 20,
+    dots: false,
+    nav: true,
+    navText: [
+        "<span class='arrow_carrot-left'></span>",
+        "<span class='arrow_carrot-right'></span>"
+    ],
+    smartSpeed: 800,
+    autoHeight: false,
+    autoplay: false,
+    responsive: {
+        0: {
+            items: 1   // 📱 Mobile: ONE FULL project
+        },
+        768: {
+            items: 2   // 📱 Tablet
+        },
+        1200: {
+            items: 4   // 💻 Laptop/Desktop
         }
-    });
+    }
+});
+
 
     /*-----------------------------
         Testimonial Slider
@@ -188,4 +188,7 @@
         });
     });
 
+    
+
 })(jQuery);
+

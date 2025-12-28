@@ -26,6 +26,37 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/slick.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <style>
+  @media (max-width: 768px) {
+
+    /* Reduce bottom space of ABOUT section */
+    .about {
+      padding-bottom: 40px !important;
+    }
+
+    /* Reduce top space of the NEXT section after About */
+    .about + section {
+      padding-top: 40px !important;
+    }
+  }
+</style>
+<style>
+  @media (max-width: 768px) {
+
+    /* Center text inside project card on mobile */
+    .project__slider__item__hover {
+      text-align: center !important;
+    }
+
+    .project__slider__item__hover span,
+    .project__slider__item__hover h5 {
+      text-align: center !important;
+      width: 100%;
+    }
+  }
+</style>
+
 </head>
 
 <body>
@@ -89,15 +120,18 @@
                     <a href="./about.html" class="primary-btn">See About</a>
                     <div class="hero__social">
                         <a href="https://www.instagram.com/elevate_edge_interiors/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919030919922" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+
                     </div>
                 </div>
             </div>
             <div class="hero__items set-bg" data-setbg="img/hero/main11.png">
                 <div class="hero__text">
-                    <h2>Quality is not only our standard.</h2>
+                    <h2>Built on quality. Driven by design.</h2>
                     <a href="./about.html" class="primary-btn">See About</a>
                     <div class="hero__social">
                         <a href="https://www.instagram.com/elevate_edge_interiors/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919030919922" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
@@ -108,111 +142,214 @@
     <!-- Hero Section End -->
 
     <!-- About Section Begin -->
-    <section class="about spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about__text">
-                        <div class="section-title">
-                            <span>who are we</span>
-                            <h2 style="text-transform: uppercase;">
-                                    We elevate <br> your space<br>
-                                    to elevate your life.
-                            </h2>
+<section class="about spad">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-md-12" style="text-align:center; padding: 0 12px;">
+
+        <!-- TAG -->
+        <span style="
+          display:block;
+          text-transform:uppercase;
+          letter-spacing:1.5px;
+          font-weight:600;
+          color:#dfa667;
+          margin-bottom:10px;
+          font-size:14px;">
+          Who are we
+        </span>
+
+        <!-- HEADING -->
+        <h2 style="
+          font-family:'Aldrich', sans-serif;
+          font-size:56px;
+          line-height:1.15;
+          margin-bottom:20px;
+          text-transform:uppercase;">
+          We elevate<br>
+          your space<br>
+          to elevate your life.
+        </h2>
+
+        <!-- PARAGRAPH 1 -->
+        <p style="
+          font-size:19px;
+          line-height:1.7;
+          color:#444;
+          max-width:880px;
+          margin:0 auto 18px;">
+          At <strong>Elevate Edge</strong>, we design interiors that reflect your identity and elevate your lifestyle.
+          From serene homes to dynamic workspaces and luxurious commercial environments, our designs balance
+          elegance, function, and inspiration.
+        </p>
+
+        <!-- PARAGRAPH 2 -->
+        <p style="
+          font-size:19px;
+          line-height:1.7;
+          color:#444;
+          max-width:880px;
+          margin:0 auto 18px;">
+          We move beyond templates—using adaptive layouts, rich textures, and light—to transform ordinary
+          spaces into timeless designs that begin with your story.
+        </p>
+
+        <!-- HIGHLIGHT -->
+        <p style="
+          font-size:20px;
+          font-weight:600;
+          color:#111;
+          margin-top:16px;">
+          Where vision meets craftsmanship.
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 📱 MOBILE COMPACT OVERRIDES -->
+  <style>
+    @media (max-width: 768px) {
+      .about h2 {
+        font-size: 26px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 14px !important;
+      }
+
+      .about p {
+        font-size: 14px !important;
+        line-height: 1.55 !important;
+        margin-bottom: 14px !important;
+      }
+
+      .about span {
+        font-size: 11px !important;
+        margin-bottom: 8px !important;
+      }
+    }
+  </style>
+
+</section>
 
 
 
-                        </div>
-                        <div class="about__para__text">
-                            <div style="line-height: 1.8; margin: 20px 0;">
-                            <p style="margin-bottom: 20px;">
-                            At <strong>Elevate Edge</strong>, we don't just design interiors - we craft spaces that reflect your identity,
-                            elevate your lifestyle, and spark daily inspiration. Whether it's a serene home, 
-                            a dynamic workspace, or a luxurious commercial environment, 
-                            our designs blend bold ideas with thoughtful execution to achieve balance, elegance, 
-                            and functionality.
-                        </p>
-                        <p>
-                            We go beyond templates to create truly personalized spaces. By exploring adaptive layouts, 
-                            rich textures, and the artful play of light, we transform ordinary into extraordinary. 
-                            Every project begins with your story - and ends in a timeless design. <br><br>
-                            <strong>Choose Elevate Edge</strong> - where vision meets craftsmanship.
-                        </p>
-                    </div>
-
-                        </div>
-                       
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about__pic">
-                        <div class="about__pic__inner">
-                            <img src="img/about-pic.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- About Section End -->
 
     <!-- Project Section Begin -->
-    <section class="project">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="section-title">
-                        <span>Our works</span>
-                        <h2>projects</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="project__slider owl-carousel">
-                    <div class="col-lg-3">
-                        <div class="project__slider__item set-bg" data-setbg="img/project/sofa1.jpg">
-                            <div class="project__slider__item__hover">
-                                <span>Interiors</span>
-                                <h5>Sofa</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="project__slider__item set-bg" data-setbg="img/project/bedroom1.jpg">
-                            <div class="project__slider__item__hover">
-                                <span>Interiors</span>
-                                <h5>Bed</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="project__slider__item set-bg" data-setbg="img/project/dining1.jpg">
-                            <div class="project__slider__item__hover">
-                                <span>Interiors</span>
-                                <h5>Dining</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="project__slider__item set-bg" data-setbg="img/project/coffe1.jpg">
-                            <div class="project__slider__item__hover">
-                                <span>Interiors</span>
-                                <h5>Furniture</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="project__slider__item set-bg" data-setbg="img/project/project-2.jpg">
-                            <div class="project__slider__item__hover">
-                                <span>Interiors</span>
-                                <h5>Cafe</h5>
-                            </div>
-                        </div>
-                    </div>
+ <section class="project" style="overflow:hidden;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="section-title" style="margin-bottom:30px;">
+                    <span>Our works</span>
+                    <h2>projects</h2>
                 </div>
             </div>
         </div>
-    </section>
+
+        <div class="row">
+            <div class="project__slider owl-carousel" style="overflow:hidden;">
+
+                <div class="project-slide">
+                    <div class="project__slider__item set-bg" data-setbg="img/project/sofa1.jpg">
+                        <div class="project__slider__item__hover">
+                            <span>Interiors</span>
+                            <h5>Sofa</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-slide">
+                    <div class="project__slider__item set-bg" data-setbg="img/project/bedroom1.jpg">
+                        <div class="project__slider__item__hover">
+                            <span>Interiors</span>
+                            <h5>Bed</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-slide">
+                    <div class="project__slider__item set-bg" data-setbg="img/project/dining1.jpg">
+                        <div class="project__slider__item__hover">
+                            <span>Interiors</span>
+                            <h5>Dining</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-slide">
+                    <div class="project__slider__item set-bg" data-setbg="img/project/coffe1.jpg">
+                        <div class="project__slider__item__hover">
+                            <span>Interiors</span>
+                            <h5>Furniture</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-slide">
+                    <div class="project__slider__item set-bg" data-setbg="img/project/project-2.jpg">
+                        <div class="project__slider__item__hover">
+                            <span>Interiors</span>
+                            <h5>Cafe</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 📱 MOBILE: ONE FULL SLIDE AT A TIME -->
+    <style>
+        @media (max-width: 768px) {
+
+            /* Prevent partial slides */
+            .project__slider {
+                overflow: hidden !important;
+            }
+
+            /* Each slide takes full width */
+            .project-slide {
+                width: 100% !important;
+                padding: 0 16px;
+                box-sizing: border-box;
+            }
+
+            /* Full image card */
+            .project__slider__item {
+                height: 320px !important;
+                width: 100% !important;
+                border-radius: 14px;
+                overflow: hidden;
+            }
+
+            /* Hover content neat */
+            .project__slider__item__hover {
+                left: 14px !important;
+                width: calc(100% - 28px) !important;
+                bottom: 14px !important;
+                padding: 14px !important;
+            }
+
+            .project__slider__item__hover span {
+                font-size: 12px !important;
+            }
+
+            .project__slider__item__hover h5 {
+                font-size: 16px !important;
+            }
+
+            /* Reduce section gaps */
+            .project {
+                padding-top: 40px !important;
+                padding-bottom: 40px !important;
+            }
+        }
+    </style>
+
+</section>
+<!-- Project Section End -->
+
     <!-- Project Section End -->
 
 <!-- Services Section Begin -->
