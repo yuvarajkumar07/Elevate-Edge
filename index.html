@@ -3,21 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="Staging, unica, creative, html">
+    <meta name="keywords"
+        content="Elevate Edge Interiors, interior design, Hyderabad, residential design, commercial interiors, home design">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Elevate Edge Interiors | Professional Interior Designers</title>
-    <meta name="description" content="Elevate Edge Interiors is a professional interior design company offering premium residential and commercial interior solutions with modern designs.">
+    <title>Elevate Edge Interiors | Premium Interior Design – Hyderabad</title>
+    <meta name="description"
+        content="Elevate Edge Interiors – Hyderabad's trusted interior design company. We craft premium residential & commercial spaces with innovative design, smart automation, and timeless craftsmanship.">
 
     <link rel="icon" type="image/jpg" href="img/Elevate Edge Logo.jpg">
 
-
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -27,79 +27,7 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/slick.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-
-    <style>
-  @media (max-width: 768px) {
-
-    /* Reduce bottom space of ABOUT section */
-    .about {
-      padding-bottom: 40px !important;
-    }
-
-    /* Reduce top space of the NEXT section after About */
-    .about + section {
-      padding-top: 40px !important;
-    }
-  }
-
-  
-</style>
-<style>
-  @media (max-width: 768px) {
-
-    /* Always show text on mobile (no hover/tap needed) */
-    .project__slider__item__hover {
-      bottom: 15px !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-      text-align: center !important;
-    }
-
-    /* Center text */
-    .project__slider__item__hover span,
-    .project__slider__item__hover h5 {
-      text-align: center !important;
-      width: 100% !important;
-      left: 0 !important;
-      right: 0 !important;
-    }
-
-    /* Disable hover animation offsets */
-    .project__slider__item__hover span {
-      position: static !important;
-    }
-
-    .project__slider__item__hover h5 {
-      position: static !important;
-    }
-
-    /* Prevent hover-triggered movement */
-    .project__slider__item:hover .project__slider__item__hover {
-      bottom: 15px !important;
-    }
-  }
-</style>
-<style>
-  @media (max-width: 768px) {
-
-    /* Fix image height & prevent compression */
-    .project__slider__item {
-      height: 380px !important;              /* more natural height */
-      background-size: cover !important;     /* fill without stretch */
-      background-position: center center !important;
-    }
-
-    /* Ensure container doesn’t squeeze image */
-    .project-slide,
-    .project__slider .owl-item {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-</style>
-
-
+    <link rel="stylesheet" href="css/elevate-enhancements.css" type="text/css">
 </head>
 
 <body>
@@ -108,11 +36,22 @@
         <div class="loader"></div>
     </div>
 
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919030919922" class="ee-whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="ee-back-top" class="ee-back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__logo">
-            <a href="index.html"><img src="img/Insta Elevate Edge Logo.png" alt=""></a>
+            <a href="/"><img src="img/Insta Elevate Edge Logo.png" alt="Elevate Edge Logo"></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__widget">
@@ -125,24 +64,24 @@
     <!-- Header Section Begin -->
     <header class="header">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-3">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-6">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/Insta Elevate Edge Logo.png" alt=""></a>
+                        <a href="/"><img src="img/Insta Elevate Edge Logo.png" alt="Elevate Edge Interiors Logo"></a>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 d-none d-lg-block">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./about.html">About</a></li>
-                            <li><a href="./services.html">Services</a></li>
-                            <li><a href="./projects.html">Projects</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <li class="active"><a href="/">Home</a></li>
+                            <li><a href="about">About</a></li>
+                            <li><a href="services">Services</a></li>
+                            <li><a href="projects">Projects</a></li>
+                            <li><a href="contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 d-none d-lg-block">
                     <div class="header__widget">
                         <span>Contact Us</span>
                         <h4>+91 90309 19922</h4>
@@ -159,833 +98,432 @@
         <div class="hero__slider owl-carousel">
             <div class="hero__items set-bg" data-setbg="img/hero/main11.png">
                 <div class="hero__text">
-                    <h2 class="responsive-hero">
-                        Let's design<br class="mobile-break">
-                        your<br class="mobile-break">
-                        dream space<br class="mobile-break">
-                        together
-                      </h2>
-
-                    <a href="./about.html" class="primary-btn">See About</a>
+                    <h2>Let's Design<br>Your Dream<br>Space Together</h2>
+                    <a href="about" class="primary-btn">Discover Our Story</a>
                     <div class="hero__social">
-                        <a href="https://www.instagram.com/elevate_edge_interiors/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/919030919922" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-
+                        <a href="https://www.instagram.com/elevate_edge_interiors/" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919030919922" target="_blank" rel="noopener noreferrer"
+                            aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="hero__items set-bg" data-setbg="img/hero/main11.png">
+            <div class="hero__items set-bg" data-setbg="img/hero/main1.png">
                 <div class="hero__text">
-                    <h2>Elevate Edge Interiors - Interior Design Experts</h2>
-                    <a href="./about.html" class="primary-btn">See About</a>
+                    <h2>Premium Interiors<br>Crafted for<br>Your Lifestyle</h2>
+                    <a href="services" class="primary-btn">Explore Services</a>
                     <div class="hero__social">
-                        <a href="https://www.instagram.com/elevate_edge_interiors/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/919030919922" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/elevate_edge_interiors/" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919030919922" target="_blank" rel="noopener noreferrer"
+                            aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__items set-bg" data-setbg="img/hero/main111.png">
+                <div class="hero__text">
+                    <h2>Where Vision<br>Meets<br>Craftsmanship</h2>
+                    <a href="projects" class="primary-btn">View Our Work</a>
+                    <div class="hero__social">
+                        <a href="https://www.instagram.com/elevate_edge_interiors/" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919030919922" target="_blank" rel="noopener noreferrer"
+                            aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="slide-num" id="snh-1"></div>
         <div class="slider__progress"><span></span></div>
-
-        <style>
-  /* Desktop */
-  .mobile-break {
-    display: none;
-  }
-
-  /* 📱 Mobile View */
-  @media (max-width: 768px) {
-
-    .hero__text h2.responsive-hero {
-      position: static !important;
-      top: 0 !important;
-      opacity: 1 !important;
-      font-size: 28px !important;
-      line-height: 1.15 !important;
-      text-align: center !important;
-      white-space: normal !important;
-    }
-
-    .mobile-break {
-      display: block !important;
-    }
-  }
-</style>
-
     </section>
     <!-- Hero Section End -->
 
+    <div class="ee-divider"></div>
+
     <!-- About Section Begin -->
-<section class="about spad">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10 col-md-12" style="text-align:center; padding: 0 12px;">
+    <section class="about spad">
+        <div class="container">
+            <div class="row justify-content-center ee-animate">
+                <div class="col-lg-10 col-md-12" style="text-align:center; padding: 0 16px;">
+                    <span
+                        style="display:block; text-transform:uppercase; letter-spacing:4px; font-weight:700; color:#dfa667; margin-bottom:12px; font-size:12px;">
+                        Who Are We?
+                    </span>
+                    <h2
+                        style="font-family:'Aldrich', sans-serif; font-size:clamp(32px,5vw,58px); line-height:1.1; margin-bottom:24px; text-transform:uppercase; color:#111;">
+                        We Elevate<br>Your Space<br>to Elevate Your Life.
+                    </h2>
+                    <div class="about-accent-bar"></div>
+                    <p
+                        style="font-size:clamp(15px,1.5vw,18px); line-height:1.8; color:#555; max-width:820px; margin:0 auto 16px;">
+                        <strong>Elevate Edge Interiors</strong> is a full-service design company based in Jubilee Hills,
+                        Hyderabad — specializing in modern residential and commercial interiors. We design spaces that
+                        reflect your identity, amplify your lifestyle, and stand the test of time.
+                    </p>
+                    <p
+                        style="font-size:clamp(14px,1.3vw,17px); line-height:1.8; color:#666; max-width:820px; margin:0 auto 24px;">
+                        We move beyond templates — using adaptive layouts, rich textures, and purposeful light — to
+                        transform ordinary spaces into extraordinary environments that begin with your story.
+                    </p>
+                    <p style="font-size:clamp(15px,1.4vw,18px); font-weight:700; color:#111; margin-bottom:0;">
+                        Where vision meets craftsmanship.
+                    </p>
 
-        <!-- TAG -->
-        <span style="
-          display:block;
-          text-transform:uppercase;
-          letter-spacing:1.5px;
-          font-weight:600;
-          color:#dfa667;
-          margin-bottom:10px;
-          font-size:14px;">
-          Who are we?
-        </span>
-
-        <!-- HEADING -->
-        <h2 style="
-          font-family:'Aldrich', sans-serif;
-          font-size:56px;
-          line-height:1.15;
-          margin-bottom:20px;
-          text-transform:uppercase;">
-          We elevate<br>
-          your space<br>
-          to elevate your life.
-        </h2>
-
-        <!-- PARAGRAPH 1 -->
-        <p style="
-          font-size:19px;
-          line-height:1.7;
-          color:#444;
-          max-width:880px;
-          margin:0 auto 18px;">
-          <strong>Elevate Edge Interiors</strong> is a trusted interior design company specializing in modern residential and commercial interiors. 
-          At Elevate Edge Interiors, 
-          we focus on delivering high-quality designs, functional spaces, and complete customer satisfaction.
-
-          At Elevate Edge, we design interiors that reflect your identity and elevate your lifestyle.
-          From serene homes to dynamic workspaces and luxurious commercial environments, our designs balance
-          elegance, function, and inspiration.
-        </p>
-
-        <!-- PARAGRAPH 2 -->
-        <p style="
-          font-size:19px;
-          line-height:1.7;
-          color:#444;
-          max-width:880px;
-          margin:0 auto 18px;">
-          We move beyond templates—using adaptive layouts, rich textures, and light—to transform ordinary
-          spaces into timeless designs that begin with your story.
-        </p>
-
-        <!-- HIGHLIGHT -->
-        <p style="
-          font-size:20px;
-          font-weight:600;
-          color:#111;
-          margin-top:16px;">
-          Where vision meets craftsmanship.
-        </p>
-       <div style="
-  margin:40px auto 0;
-  padding:clamp(18px,2.5vw,32px);
-  border-radius:18px;
-  background:linear-gradient(135deg,#f9f5f0,#ffffff);
-  box-shadow:0 14px 40px rgba(0,0,0,0.08);
-  display:block;
-  max-width:720px;
-  text-align:center;
-">
-
-  <span style="
-    display:block;
-    font-size:clamp(12px,1.1vw,14px);
-    letter-spacing:2px;
-    text-transform:uppercase;
-    color:#dfa667;
-    font-weight:600;
-    margin-bottom:10px;">
-    From the Founders
-  </span>
-
-  <h4 style="
-    font-size:clamp(18px,2vw,26px);
-    font-weight:700;
-    margin:0;
-    color:#111;
-    line-height:1.4;">
-    Subhash Patibandla <br>
-    <span style="color:#dfa667; font-weight:600;">&</span> <br>
-    Vanya Nuthakki
-  </h4>
-
-</div>
-
-
-        
-
-      </div>
-    </div>
-  </div>
-
-  <!-- 📱 MOBILE COMPACT OVERRIDES -->
-  <style>
-    @media (max-width: 768px) {
-      .about h2 {
-        font-size: 26px !important;
-        line-height: 1.2 !important;
-        margin-bottom: 14px !important;
-      }
-
-      .about p {
-        font-size: 14px !important;
-        line-height: 1.55 !important;
-        margin-bottom: 14px !important;
-      }
-
-      .about span {
-        font-size: 11px !important;
-        margin-bottom: 8px !important;
-      }
-    }
-  </style>
-
-</section>
-
-
-
+                    <!-- Founders card -->
+                    <div class="founders-card"
+                        style="margin:40px auto 0; padding:clamp(20px,3vw,36px); border-radius:18px; max-width:680px; text-align:center;">
+                        <span
+                            style="display:block; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#dfa667; font-weight:700; margin-bottom:14px;">From
+                            the Founders</span>
+                        <h4
+                            style="font-size:clamp(20px,2.5vw,28px); font-weight:700; color:#fff; line-height:1.5; margin:0;">
+                            Subhash Patibandla
+                            <span
+                                style="color:#dfa667; font-weight:600; display:block; font-size:0.7em; margin: 4px 0;">&amp;</span>
+                            Vanya Nuthakki
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- About Section End -->
 
-    <!-- Project Section Begin -->
- <section class="project" style="overflow:hidden;">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="section-title" style="margin-bottom:30px;">
-                   <!-- <span>What we do?</span>
-                    <h2>projects</h2>-->
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="project__slider owl-carousel" style="overflow:hidden;">
-
-                <div class="project-slide">
-                    <div class="project__slider__item set-bg" data-setbg="img/project/sofa1.jpg">
-                        <div class="project__slider__item__hover">
-                            <span>Interiors</span>
-                            <h5>Sofa</h5>
-                        </div>
+    <!-- Stats Section -->
+    <section class="ee-stats-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6 col-md-3 ee-animate">
+                    <div class="ee-stat-item">
+                        <span class="ee-stat-number" data-target="20" data-suffix="+">20+</span>
+                        <span class="ee-stat-label">Projects Completed</span>
                     </div>
                 </div>
-
-                <div class="project-slide">
-                    <div class="project__slider__item set-bg" data-setbg="img/project/bedroom1.jpg">
-                        <div class="project__slider__item__hover">
-                            <span>Interiors</span>
-                            <h5>Bed</h5>
-                        </div>
+                <div class="col-6 col-md-3 ee-animate">
+                    <div class="ee-stat-item">
+                        <span class="ee-stat-number" data-target="25" data-suffix="+">25+</span>
+                        <span class="ee-stat-label">Happy Clients</span>
                     </div>
                 </div>
-
-                <div class="project-slide">
-                    <div class="project__slider__item set-bg" data-setbg="img/project/dining1.jpg">
-                        <div class="project__slider__item__hover">
-                            <span>Interiors</span>
-                            <h5>Dining</h5>
-                        </div>
+                <div class="col-6 col-md-3 ee-animate">
+                    <div class="ee-stat-item">
+                        <span class="ee-stat-number" data-target="4" data-suffix="+">4+</span>
+                        <span class="ee-stat-label">Years Experience</span>
                     </div>
                 </div>
-
-                <div class="project-slide">
-                    <div class="project__slider__item set-bg" data-setbg="img/project/coffe1.jpg">
-                        <div class="project__slider__item__hover">
-                            <span>Interiors</span>
-                            <h5>Furniture</h5>
-                        </div>
+                <div class="col-6 col-md-3 ee-animate">
+                    <div class="ee-stat-item">
+                        <span class="ee-stat-number" data-target="100" data-suffix="%">100%</span>
+                        <span class="ee-stat-label">Client Satisfaction</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <!-- Stats Section End -->
 
-                <div class="project-slide">
-                    <div class="project__slider__item set-bg" data-setbg="img/project/project-2.jpg">
-                        <div class="project__slider__item__hover">
-                            <span>Interiors</span>
-                            <h5>Cafe</h5>
+    <div class="ee-divider"></div>
+
+    <!-- Project Slider Section Begin -->
+    <section class="project" style="overflow:hidden;">
+        <div class="container-fluid">
+            <div class="project-section-header ee-animate">
+                <span>Our Portfolio</span>
+                <h2>FEATURED PROJECTS</h2>
+            </div>
+            <div class="row">
+                <div class="project__slider owl-carousel" style="overflow:hidden;">
+                    <div class="project-slide">
+                        <div class="project__slider__item set-bg" data-setbg="img/project/sofa1.jpg">
+                            <div class="project__slider__item__hover">
+                                <span>Residential</span>
+                                <h5>Living Room</h5>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- 📱 MOBILE: ONE FULL SLIDE AT A TIME -->
-    <style>
-        @media (max-width: 768px) {
-
-            /* Prevent partial slides */
-            .project__slider {
-                overflow: hidden !important;
-            }
-
-            /* Each slide takes full width */
-            .project-slide {
-                width: 100% !important;
-                padding: 0 16px;
-                box-sizing: border-box;
-            }
-
-            /* Full image card */
-            .project__slider__item {
-                height: 320px !important;
-                width: 100% !important;
-                border-radius: 14px;
-                overflow: hidden;
-            }
-
-            /* Hover content neat */
-            .project__slider__item__hover {
-                left: 14px !important;
-                width: calc(100% - 28px) !important;
-                bottom: 14px !important;
-                padding: 14px !important;
-            }
-
-            .project__slider__item__hover span {
-                font-size: 12px !important;
-            }
-
-            .project__slider__item__hover h5 {
-                font-size: 16px !important;
-            }
-
-            /* Reduce section gaps */
-            .project {
-                padding-top: 40px !important;
-                padding-bottom: 40px !important;
-            }
-        }
-    </style>
-
-</section>
-
-    <!-- Project Section End -->
-
-    
-<!-- Services Section Begin -->
-<section class="services spad" style="padding-bottom:60px;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title text-center" style="margin-bottom:30px;">
-                    <span>Our specialization</span>
-                    <h2>What we do?</h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="services__item" style="text-align:center;">
-                    <img src="img/services/services-1.png" alt="" style="width:60px; margin-bottom:15px;">
-                    <h4>Interior Design</h4>
-                    <p style="color:#444;">
-                        Elegant interiors with balanced layouts, textures, and comfort.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="services__item" style="text-align:center;">
-                    <img src="img/services/services-2.png" alt="" style="width:60px; margin-bottom:15px;">
-                    <h4>Office Design</h4>
-                    <p style="color:#444;">
-                        Workspaces designed for creativity, focus, and productivity.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="services__item" style="text-align:center;">
-                    <img src="img/services/services-3.png" alt="" style="width:60px; margin-bottom:15px;">
-                    <h4>Automation</h4>
-                    <p style="color:#444;">
-                        Smart systems for lighting, climate, and security.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="services__item" style="text-align:center;">
-                    <img src="img/services/services-4.png" alt="" style="width:60px; margin-bottom:15px;">
-                    <h4>Architecture</h4>
-                    <p style="color:#444;">
-                        Purpose-driven, sustainable, and innovative structures.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- 📱 MOBILE COMPACT FIX -->
-    <style>
-        @media (max-width: 768px) {
-
-            /* Reduce card padding & height */
-            .services__item {
-                padding: 18px 14px !important;
-                min-height: auto !important;
-            }
-
-            /* Reduce heading size */
-            .services__item h4 {
-                font-size: 16px !important;
-                margin-bottom: 10px !important;
-            }
-
-            /* Reduce paragraph size */
-            .services__item p {
-                font-size: 14px !important;
-                line-height: 1.55 !important;
-            }
-
-            /* Reduce section padding */
-            .services {
-                padding-top: 40px !important;
-                padding-bottom: 40px !important;
-            }
-
-            /* Smaller icons */
-            .services__item img {
-                width: 48px !important;
-                margin-bottom: 10px !important;
-            }
-        }
-    </style>
-
-</section>
-<!-- Services Section End -->
-
-
-<!-- Testimonial Section Begin -->
-<section class="testimonial spad set-bg" data-setbg="img/testimonial/testimonial-bg.jpg">
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <div class="section-title">
-          <span>Prestigious Communities</span>
-          <h2 class="responsive-heading" style="text-transform: uppercase;">
-  Projects Delivered<br class="mobile-break">
-  in Iconic<br class="mobile-break">
-  Residential Spaces
-</h2>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SCROLLING LOGOS -->
-  <div class="logo-marquee">
-    <div class="logo-track">
-      <img src="img/logo/dsr.png" alt="">
-      <img src="img/logo/rajapushpa.png" alt="">
-      <img src="img/logo/myhomeconstructions.webp" alt="">
-      <img src="img/logo/aparna.svg" alt="">
-      <img src="img/logo/lansum.svg" alt="">
-      <img src="img/logo/ncclimited.png" alt="">
-      <img src="img/logo/prestige.svg" alt="">
-
-      <!-- duplicate for seamless loop -->
-      <img src="img/logo/dsr.png" alt="">
-      <img src="img/logo/rajapushpa.png" alt="">
-      <img src="img/logo/myhomeconstructions.webp" alt="">
-      <img src="img/logo/aparna.svg" alt="">
-      <img src="img/logo/lansum.svg" alt="">
-      <img src="img/logo/ncclimited.png" alt="">
-      <img src="img/logo/prestige.svg" alt="">
-    </div>
-  </div>
-
-  <style>
-  /* Default: Laptop/Desktop (single line) */
-  .mobile-break {
-    display: none;
-  }
-
-  /* 📱 Mobile View */
-  @media (max-width: 768px) {
-    .responsive-heading {
-      font-size: 22px !important;
-      line-height: 1.25 !important;
-    }
-
-    .mobile-break {
-      display: inline;
-    }
-  }
-</style>
-
-
-  <style>
-  @media (max-width: 768px) {
-
-    /* Reduce heading size on mobile */
-    .testimonial .section-title h2 {
-      font-size: 22px !important;
-      line-height: 1.3 !important;
-      margin-bottom: 10px !important;
-    }
-
-    /* Reduce subheading */
-    .testimonial .section-title span {
-      font-size: 12px !important;
-      letter-spacing: 1px !important;
-    }
-  }
-</style>
-
-
-  <!-- INLINE CSS -->
-  <style>
-    .logo-marquee {
-      overflow: hidden;
-      width: 100%;
-      margin-top: 40px;
-    }
-
-    .logo-track {
-      display: flex;
-      align-items: center;
-      gap: 60px;
-      width: max-content;
-      animation: scrollLogos 40s linear infinite;
-    }
-
-    .logo-track img {
-      max-height: 60px;
-      width: auto;
-      opacity: 1;
-    }
-
-    @keyframes scrollLogos {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-50%);
-      }
-    }
-
-    /* Mobile */
-    @media (max-width: 768px) {
-      .logo-track {
-        gap: 36px;
-        animation-duration: 25s;
-      }
-
-      .logo-track img {
-        max-height: 40px;
-      }
-
-      .testimonial {
-        padding-top: 40px !important;
-        padding-bottom: 40px !important;
-      }
-    }
-  </style>
-
-</section>
-<!-- Testimonial Section End -->
-
-
-   
-
-<!--
-<section class="team spad">
-    <div class="container">
-
-        #Heading
-        <div class="row justify-content-center">
-            <div class="col-lg-12 text-center">
-                <div class="section-title" style="margin-bottom:30px;">
-                    <span>Our Team</span>
-                    <h2>Meet Our Team</h2>
-                </div>
-            </div>
-        </div>
-
-        #Team Members
-        <div class="row justify-content-center">
-
-            Member 1
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="team__item set-bg" data-setbg="img/team/subhash.jpg">
-                    <div class="team__text">
-                        <div class="team__title">
-                            <h5>Subhash Patibandla</h5>
-                            <span>Co-Founder</span>
+                    <div class="project-slide">
+                        <div class="project__slider__item set-bg" data-setbg="img/project/bedroom1.jpg">
+                            <div class="project__slider__item__hover">
+                                <span>Residential</span>
+                                <h5>Bedroom Suite</h5>
+                            </div>
                         </div>
-                        <p>
-                            Design begins where structure ends. I believe that creativity brings warmth, personality, 
-                            and soul to a space. From color to texture, it's about crafting an atmosphere that feels 
-                            alive - a place where people can feel inspired, comforted, and truly at home.
-                        </p>
-                        <div class="team__social">
-                            <a href="https://www.instagram.com/subhashpatibandla/" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/subhash-patibandla-04163b154/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="project-slide">
+                        <div class="project__slider__item set-bg" data-setbg="img/project/dining1.jpg">
+                            <div class="project__slider__item__hover">
+                                <span>Residential</span>
+                                <h5>Dining Space</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-slide">
+                        <div class="project__slider__item set-bg" data-setbg="img/project/coffe1.jpg">
+                            <div class="project__slider__item__hover">
+                                <span>Commercial</span>
+                                <h5>Cafe Interior</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-slide">
+                        <div class="project__slider__item set-bg" data-setbg="img/project/project-2.jpg">
+                            <div class="project__slider__item__hover">
+                                <span>Commercial</span>
+                                <h5>Office Design</h5>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="text-center" style="margin-top:40px;">
+                <a href="projects" class="primary-btn"
+                    style="background:#dfa667; border:2px solid #dfa667; border-radius:50px; padding:14px 40px; font-size:12px; letter-spacing:2px; font-weight:700; color:#fff; display:inline-block; transition:all 0.4s ease; text-decoration:none;">View
+                    All Projects</a>
+            </div>
+        </div>
+    </section>
+    <!-- Project Slider Section End -->
 
-            #Member 2
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="team__item set-bg" data-setbg="img/team/vanya.jpg">
-                    <div class="team__text">
-                        <div class="team__title">
-                            <h5>Vanya Nuthakki</h5>
-                            <span>Co-Founder</span>
-                        </div>
-                        <p>
-                            Architecture is more than structure - it's the art of shaping experiences. Every line 
-                            we draw is guided by purpose, proportion, and people. 
-                            My goal is to design spaces that not only stand the test of time but leave a lasting emotional impression.
-                        </p>
-                        <div class="team__social">
-                            <a href="https://www.instagram.com/vanya_nuthakki_96/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        </div>
+    <div class="ee-divider"></div>
+
+    <!-- Services Section Begin -->
+    <section class="services spad" style="padding-bottom:80px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title text-center ee-animate" style="margin-bottom:50px;">
+                        <span>Our Specialization</span>
+                        <h2>What We Do</h2>
                     </div>
                 </div>
             </div>
-
+            <div class="row ee-stagger-children">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="services__item ee-animate">
+                        <img src="img/services/services-1.png" alt="Interior Design Service">
+                        <h4>Interior Design</h4>
+                        <p>Elegant interiors with balanced layouts, rich textures, and timeless comfort.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="services__item ee-animate">
+                        <img src="img/services/services-2.png" alt="Office Design Service">
+                        <h4>Office Design</h4>
+                        <p>Modern workspaces designed for creativity, focus, and team productivity.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="services__item ee-animate">
+                        <img src="img/services/services-3.png" alt="Home Automation Service">
+                        <h4>Automation</h4>
+                        <p>Smart systems for lighting, climate, and security — seamlessly integrated.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="services__item ee-animate">
+                        <img src="img/services/services-4.png" alt="Architecture Service">
+                        <h4>Architecture</h4>
+                        <p>Purpose-driven, sustainable, and innovative architectural structures.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top:40px;">
+                <a href="services" class="primary-btn"
+                    style="background:#dfa667; border:2px solid #dfa667; border-radius:50px; padding:14px 40px; font-size:12px; letter-spacing:2px; font-weight:700; color:#fff; display:inline-block; transition:all 0.4s ease; text-decoration:none;">All
+                    Services</a>
+            </div>
         </div>
-    </div>
+    </section>
+    <!-- Services Section End -->
 
-    <style>
-        .team__item {
-            margin-bottom: 30px;
-            border-radius: 14px;
-            overflow: hidden;
-        }
+    <!-- Design Process Section Begin -->
+    <section class="ee-process-section">
+        <div class="container">
+            <div class="text-center ee-animate" style="margin-bottom:60px;">
+                <span
+                    style="display:block; font-size:12px; letter-spacing:4px; text-transform:uppercase; color:#dfa667; font-weight:700; margin-bottom:12px;">How
+                    We Work</span>
+                <h2
+                    style="font-family:'Aldrich', sans-serif; font-size:clamp(26px,3.5vw,40px); text-transform:uppercase; color:#111; line-height:1.2;">
+                    Our Design Process</h2>
+            </div>
+            <div class="row ee-stagger-children">
+                <div class="col-6 col-md-3 ee-animate">
+                    <div class="ee-process-step">
+                        <div class="ee-step-number">01</div>
+                        <h4>Discover</h4>
+                        <p>We listen to your vision, lifestyle, and preferences to understand your unique needs.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 ee-animate">
+                    <div class="ee-process-step">
+                        <div class="ee-step-number">02</div>
+                        <h4>Design</h4>
+                        <p>Our team crafts tailored 3D concepts and mood boards for your approval.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 ee-animate">
+                    <div class="ee-process-step">
+                        <div class="ee-step-number">03</div>
+                        <h4>Refine</h4>
+                        <p>We iterate with you until every detail is perfectly aligned with your expectations.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 ee-animate">
+                    <div class="ee-process-step">
+                        <div class="ee-step-number">04</div>
+                        <h4>Deliver</h4>
+                        <p>Expert execution from skilled craftsmen, delivered on time and with pride.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Design Process Section End -->
 
-        .team__text {
-            padding: 22px !important;
-        }
+    <!-- Community / Testimonial Section Begin -->
+    <section class="testimonial spad set-bg" data-setbg="img/testimonial/testimonial-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title ee-animate">
+                        <span>Prestigious Communities</span>
+                        <h2 style="color:#fff; text-transform:uppercase;">Projects Delivered in<br>Iconic Residential
+                            Spaces</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Scrolling Logos -->
+        <div class="logo-marquee">
+            <div class="logo-track">
+                <img src="img/logo/dsr.png" alt="DSR">
+                <img src="img/logo/rajapushpa.png" alt="Rajapushpa">
+                <img src="img/logo/myhomeconstructions.webp" alt="My Home Constructions">
+                <img src="img/logo/aparna.svg" alt="Aparna">
+                <img src="img/logo/lansum.svg" alt="Lansum">
+                <img src="img/logo/ncclimited.png" alt="NCC Limited">
+                <img src="img/logo/prestige.svg" alt="Prestige">
+                <!-- Duplicate for seamless loop -->
+                <img src="img/logo/dsr.png" alt="DSR">
+                <img src="img/logo/rajapushpa.png" alt="Rajapushpa">
+                <img src="img/logo/myhomeconstructions.webp" alt="My Home Constructions">
+                <img src="img/logo/aparna.svg" alt="Aparna">
+                <img src="img/logo/lansum.svg" alt="Lansum">
+                <img src="img/logo/ncclimited.png" alt="NCC Limited">
+                <img src="img/logo/prestige.svg" alt="Prestige">
+            </div>
+        </div>
 
-        .team__text p {
-            font-size: 14px;
-            line-height: 1.6;
-        }
+        <style>
+            @keyframes scrollLogos {
+                from {
+                    transform: translateX(0);
+                }
 
-        @media (max-width: 768px) {
-            .team {
-                padding-top: 40px !important;
-                padding-bottom: 40px !important;
+                to {
+                    transform: translateX(-50%);
+                }
             }
+        </style>
+    </section>
+    <!-- Community Section End -->
 
-            .team__item {
-                height: 380px !important;
-            }
-
-            .team__text {
-                padding: 16px !important;
-            }
-
-            .team__text p {
-                font-size: 13px !important;
-                line-height: 1.5 !important;
-            }
-
-            .team__social a {
-                margin-right: 10px;
-            }
-        }
-    </style>
-
-</section>
--->
-
-
-
-
-
-<!-- Start Feature Area -->
-<!-- Start Feature Area -->
-<section class="feature-area section-gap" style="background-color:#ffffff; padding:60px 0; font-family:'Segoe UI', sans-serif;">
-  
-  <div class="container" style="max-width:1140px; margin:auto;">
-
-    <!-- Section Heading -->
-    <div class="row justify-content-center">
-      <div class="col-lg-12 text-center" style="margin-bottom:40px;">
-        <h1 style="color:#222; font-size:36px; margin-bottom:10px;">
-          SOME FEATURES THAT MADE US UNIQUE
-        </h1>
-        <p style="color:#555; font-size:16px;">
-          We stand out through quality, innovation, and customer satisfaction.
-        </p>
-      </div>
-    </div>
-
-    <!-- Features -->
-    <div class="row justify-content-center" style="gap:30px;">
-
-      <!-- Feature Card -->
-      <div class="col-lg-4 col-md-6">
-        <div class="single-feature">
-          <span class="fas fa-user-cog"></span>
-          <h4>EXPERT TECHNICIANS</h4>
-          <p>
-            Skilled hands meet sharp minds, ensuring flawless execution from start to finish.
-          </p>
+    <!-- Features Section Begin -->
+    <section class="feature-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center ee-animate" style="margin-bottom:50px;">
+                    <span
+                        style="display:block; font-size:12px; letter-spacing:4px; text-transform:uppercase; color:#dfa667; font-weight:700; margin-bottom:12px;">Why
+                        Choose Us</span>
+                    <h1
+                        style="color:#111; font-size:clamp(24px,3.5vw,38px); font-family:'Aldrich', sans-serif; text-transform:uppercase; line-height:1.2;">
+                        Features That Make Us Unique</h1>
+                    <p style="color:#666; font-size:clamp(14px,1.2vw,16px); margin-top:12px;">We stand out through
+                        quality, innovation, and unwavering client satisfaction.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-feature ee-animate">
+                        <span class="fas fa-user-cog"></span>
+                        <h4>Expert Technicians</h4>
+                        <p>Skilled hands meet sharp minds, ensuring flawless execution from start to finish.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-feature ee-animate">
+                        <span class="fas fa-briefcase"></span>
+                        <h4>Professional Service</h4>
+                        <p>A seamless experience built on trust, transparency, and professionalism at every step.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-feature ee-animate">
+                        <span class="fas fa-gem"></span>
+                        <h4>Highly Recommended</h4>
+                        <p>Trusted by clients who value quality, reliability, and design excellence.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-feature ee-animate">
+                        <span class="fas fa-rocket"></span>
+                        <h4>Technical Skills</h4>
+                        <p>Future-ready solutions powered by innovation, expertise, and modern technology.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-feature ee-animate">
+                        <span class="fas fa-headset"></span>
+                        <h4>Great Support</h4>
+                        <p>Dedicated support from the first consultation to final delivery and beyond.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-feature ee-animate">
+                        <span class="fas fa-comments"></span>
+                        <h4>Positive Reviews</h4>
+                        <p>Client satisfaction that speaks louder than words — proven through results.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+    <!-- Features Section End -->
 
-      <div class="col-lg-4 col-md-6">
-        <div class="single-feature">
-          <span class="fas fa-briefcase"></span>
-          <h4>PROFESSIONAL SERVICE</h4>
-          <p>
-            A seamless experience built on trust, transparency, and professionalism.
-          </p>
+    <!-- CTA Banner -->
+    <section style="background: linear-gradient(135deg, #111 0%, #1a1a1a 100%); padding: 80px 0; text-align:center;">
+        <div class="container ee-animate">
+            <span
+                style="display:block; font-size:11px; letter-spacing:4px; text-transform:uppercase; color:#dfa667; font-weight:700; margin-bottom:16px;">Get
+                Started Today</span>
+            <h2
+                style="font-family:'Aldrich', sans-serif; font-size:clamp(26px,4vw,48px); color:#fff; text-transform:uppercase; line-height:1.2; margin-bottom:16px;">
+                Ready to Transform<br>Your Space?</h2>
+            <p
+                style="color:#b7b7b7; font-size:16px; margin-bottom:36px; max-width:500px; margin-left:auto; margin-right:auto;">
+                Let's create something extraordinary together. Contact us for a free consultation.</p>
+            <a href="contact"
+                style="background:#dfa667; color:#fff; padding:16px 48px; border-radius:50px; font-size:12px; letter-spacing:2px; font-weight:700; text-transform:uppercase; text-decoration:none; display:inline-block; transition:all 0.4s ease; border:2px solid #dfa667;">Book
+                a Consultation</a>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="single-feature">
-          <span class="fas fa-gem"></span>
-          <h4>HIGHLY RECOMMENDED</h4>
-          <p>
-            Trusted by clients who value quality, reliability, and excellence.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="single-feature">
-          <span class="fas fa-rocket"></span>
-          <h4>TECHNICAL SKILLS</h4>
-          <p>
-            Future-ready solutions powered by innovation and expertise.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="single-feature">
-          <span class="fas fa-headset"></span>
-          <h4>GREAT SUPPORT</h4>
-          <p>
-            Dedicated support from the first conversation to final delivery.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="single-feature">
-          <span class="fas fa-comments"></span>
-          <h4>POSITIVE REVIEWS</h4>
-          <p>
-            Client satisfaction that speaks louder than words.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- INLINE STYLES -->
-  <style>
-
-    /* Desktop & Common */
-    .single-feature {
-      background:#f5c887;
-      padding:28px;
-      border-radius:14px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.07);
-      text-align:center;
-      height:100%;
-    }
-
-    .single-feature span {
-      font-size:26px;
-      color:#222;
-      display:block;
-      margin-bottom:12px;
-    }
-
-    .single-feature h4 {
-      font-size:18px;
-      font-weight:600;
-      margin-bottom:10px;
-      color:#222;
-    }
-
-    .single-feature p {
-      font-size:15px;
-      color:#444;
-      line-height:1.6;
-      margin:0;
-    }
-
-    /* 📱 MOBILE OPTIMIZATION */
-    @media (max-width:768px) {
-
-      .feature-area {
-        padding:40px 0 !important;
-      }
-
-      .feature-area h1 {
-        font-size:22px !important;
-        line-height:1.3 !important;
-      }
-
-      .feature-area p {
-        font-size:14px !important;
-      }
-
-      .single-feature {
-        padding:20px !important;
-      }
-
-      .single-feature span {
-        font-size:22px !important;
-      }
-
-      .single-feature h4 {
-        font-size:16px !important;
-      }
-
-      .single-feature p {
-        font-size:13px !important;
-        line-height:1.5 !important;
-      }
-    }
-
-  </style>
-
-</section>
-<!-- End Feature Area -->
-
-
-<!-- End Feature Area -->
-
-
+    </section>
 
     <!-- Footer Section Begin -->
     <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
         <div class="container">
             <div class="footer__top">
-                <div class="row">
-                    <div class="col-lg-8 col-md-6">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 col-md-7">
                         <div class="footer__top__text">
                             <h2>Ready To Work With Us?</h2>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="footer__top__newslatter">
-                           
-                        </div>
+                    <div class="col-lg-4 col-md-5 text-md-right" style="margin-top:16px;">
+                        <a href="contact"
+                            style="background:#dfa667; color:#fff; padding:14px 36px; border-radius:50px; font-size:12px; letter-spacing:2px; font-weight:700; text-decoration:none; display:inline-block; transition:all 0.3s ease; border:2px solid #dfa667; white-space:nowrap;">Contact
+                            Us</a>
                     </div>
                 </div>
             </div>
@@ -993,18 +531,19 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="./index.html"><img src="img/Insta Elevate Edge Logo.png" alt=""></a>
+                            <a href="/"><img src="img/Insta Elevate Edge Logo.png" alt="Elevate Edge Logo"></a>
                         </div>
-                        <p>Jubilee Hills, Hyderabad - 500033, <br />Telangana</p>
+                        <p>Jubilee Hills, Hyderabad – 500033,<br>Telangana, India</p>
                         <ul>
                             <li>studioelevateedge@gmail.com</li>
                             <li>+91 90309 19922</li>
                             <li>+91 89197 94276</li>
                         </ul>
                         <div class="footer__social">
-                            <a href="https://www.instagram.com/elevate_edge_interiors/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                            <a href="https://wa.me/919030919922" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-                            
+                            <a href="https://www.instagram.com/elevate_edge_interiors/" target="_blank"
+                                rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/919030919922" target="_blank" rel="noopener noreferrer"
+                                aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1012,11 +551,10 @@
                     <div class="footer__widget">
                         <h6>Company</h6>
                         <ul>
-                            <li><a href="./about.html">About Us</a></li>
-                            <li><a href="./services.html">Services</a></li>
-                            <li><a href="./projects.html">Our Works</a></li>
-                            <li><a href="./index.html">Career</a></li>
-                            <li><a href="./index.html">FAQs</a></li>
+                            <li><a href="about">About Us</a></li>
+                            <li><a href="services">Services</a></li>
+                            <li><a href="projects">Our Works</a></li>
+                            <li><a href="contact">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1024,17 +562,17 @@
                     <div class="footer__widget">
                         <h6>Services</h6>
                         <ul>
-                            <li><a href="./services.html">Architecture</a></li>
-                            <li><a href="./services.html">Interior Design</a></li>
-                            <li><a href="./services.html">Exterior Design</a></li>
-                            <li><a href="./services.html">Planning</a></li>
+                            <li><a href="services">Interior Design</a></li>
+                            <li><a href="services">Office Design</a></li>
+                            <li><a href="services">Architecture</a></li>
+                            <li><a href="services">Automation</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__address">
                         <h6>Get In Touch</h6>
-                        <p>Jubilee Hills, Hyderabad - 500033, <br />Telangana</p>
+                        <p>Jubilee Hills, Hyderabad – 500033,<br>Telangana, India</p>
                         <ul>
                             <li>studioelevateedge@gmail.com</li>
                             <li>+91 90309 19922</li>
@@ -1044,34 +582,35 @@
                 </div>
             </div>
             <div class="copyright">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-lg-8 col-md-7">
                         <div class="copyright__text">
-                            <p>Copyright © <script>
-                                document.write(new Date().getFullYear());
-                            </script> Elevate Edge Interiors - All Rights Reserved.
-                        </p>
+                            <p>Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> Elevate Edge Interiors — All
+                                Rights Reserved.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-5">
-                    <div class="copyright__widget">
-                        <a href="./index.html">Terms of use</a>
-                        <a href="./index.html">Privacy Policy</a>
+                    <div class="col-lg-4 col-md-5">
+                        <div class="copyright__widget">
+                            <a href="/">Terms of Use</a>
+                            <a href="/">Privacy Policy</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
-<!-- Footer Section End -->
+    </footer>
+    <!-- Footer Section End -->
 
-<!-- Js Plugins -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.slicknav.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/slick.min.js"></script>
-<script src="js/main.js"></script>
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/enhancements.js"></script>
 </body>
 
 </html>
